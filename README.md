@@ -1,5 +1,7 @@
 # waySAFE 🛡️  
 Your intelligent safety companion for safer routes and smarter decisions.
+<br>
+
 <img width="452" height="452" alt="image" src="https://github.com/user-attachments/assets/deab018e-3b8e-4bca-a198-1ea910b0155f" />
 
 
