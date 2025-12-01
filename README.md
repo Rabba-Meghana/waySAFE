@@ -1,135 +1,194 @@
-waySAFE 🛡️
+# waySAFE 🛡️  
+Your intelligent safety companion for safer routes and smarter decisions.
+<img width="452" height="452" alt="image" src="https://github.com/user-attachments/assets/deab018e-3b8e-4bca-a198-1ea910b0155f" />
 
-An intelligent safety companion that analyzes environments, detects risks, and guides users toward safer routes.
 
-1. Introduction 🌍
+---
 
-waySAFE is built to help users feel safe and confident while traveling.
-It combines AI agents, environmental understanding, and a modern dashboard to deliver real time safety analysis and alternative route suggestions.
+## 🚀 Overview  
+waySAFE analyzes environments, detects risks, and guides users toward safer routes using AI agents and a modern dashboard interface.  
+Its goal is simple: **protect every step you take.**
 
-2. Core Features ⚡
-2.1 Safety Intelligence
 
-AI based safety score
+---
 
-Hazard recognition
+## 🌍 1. Introduction  
+waySAFE uses multi agent intelligence and environmental signals to compute safety scores and show safer path recommendations.
 
-Time, lighting, and density awareness
+---
 
-Historical risk pattern checks
+## ⚡ 2. Core Features  
 
-2.2 Route Guidance
+### 🔐 2.1 Safety Intelligence  
+- AI safety score  
+- Poor lighting detection  
+- Low crowd density alerts  
+- Time based risk adjustments  
+- Historical incident signal analysis  
 
-Safer alternative route suggestions
+### 🧭 2.2 Route Guidance  
+- Safer route alternatives  
+- Explanation and reasoning agent  
+- Hazard overlay on map  
 
-Reasoning explanations
+### 🖥️ 2.3 Dashboard  
+- Chart visualizations  
+- Memory timeline  
+- Metrics and logs  
+- Clean and responsive UI  
 
-Real time feedback
+---
 
-2.3 Dashboard UI
+## 🏗️ 3. System Architecture
 
-Interactive charts and metrics
+### 3.1 ASCII Architecture Diagram  
+```
 
-Memory timeline of agent decisions
+```
+            ┌───────────────────────────┐
+            │       Frontend UI         │
+            │  (waysafe-dashboard)      │
+            └───────────┬───────────────┘
+                        │
+                        ▼
+            ┌───────────────────────────┐
+            │     API Interaction       │
+            │  (frontend to backend)    │
+            └───────────┬───────────────┘
+                        │
+                        ▼
+            ┌───────────────────────────┐
+            │  Multi Agent System       │
+            │  • Safety Agent           │
+            │  • Risk Detection Agent   │
+            │  • Recommendation Agent   │
+            └───────────┬───────────────┘
+                        │
+                        ▼
+            ┌───────────────────────────┐
+            │  Safety Computation Core  │
+            │ (implementation.ipynb)    │
+            └───────────────────────────┘
+```
 
-Map view and hazard display
+```
 
-3. System Architecture 🏗️
-3.1 Frontend (waysafe dashboard)
+### 3.2 Architecture Description  
+- **Frontend**: Vite React, Tailwind, shadcn  
+- **Backend Logic**: Jupyter notebook with safety scoring algorithms  
+- **Agents**: three collaborating reasoning units  
+- **Visuals**: charts, maps, logs  
 
-Built using Vite React
+---
 
-Tailwind + shadcn UI components
+## 📂 4. Folder Structure  
 
-Charts, tables, navigation, and logic layers
+```
 
-3.2 Backend (Notebook Engine)
-
-Safety computation algorithms
-
-Multi agent reasoning workflows
-
-Route computation logic
-
-3.3 Data Flow
-
-User input enters dashboard
-
-Passed to computation layer
-
-Agents process safety score and hazards
-
-Recommendation agent produces final decision
-
-Dashboard visualizes metrics + logs
-
-4. Folder Structure 📂
 waySAFE/
 │
-├── implementation.ipynb          # backend logic and safety model
-├── waysafe-dashboard/            # frontend dashboard
-│   ├── src/
-│   │   ├── components/           # UI components
-│   │   ├── pages/                # dashboard pages
-│   │   ├── api/                  # frontend API calls
-│   │   ├── hooks/                # custom hooks
-│   │   ├── lib/                  # utils
-│   │   └── main.tsx              # app entry
-│   ├── public/                   # assets
-│   ├── tailwind.config.ts        
-│   ├── tsconfig.json
-│   └── vite.config.ts
+├── implementation.ipynb
+├── technology.pdf
+└── waysafe-dashboard/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── api/
+│   ├── hooks/
+│   ├── lib/
+│   └── main.tsx
+├── public/
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── vite.config.ts
 
-5. Installation & Setup ⚙️
-Frontend Setup
+````
+
+---
+
+## ⚙️ 5. Installation & Setup  
+
+### Frontend  
+```bash
 cd waysafe-dashboard
 npm install
 npm run dev
+````
 
-Backend Setup
+### Backend
 
-Open implementation.ipynb in Jupyter Notebook, VSCode, or Google Colab and run all cells.
+Open `implementation.ipynb` in Jupyter Notebook, VSCode, or Google Colab and run all cells.
 
-6. How It Works 🔍
+---
 
-User inputs a location or route
+## 🔍 6. How It Works
 
-Safety agent computes baseline safety score
+1. User enters a start location
+2. Safety agent calculates base safety score
+3. Risk agent evaluates lighting, crowd level, isolation
+4. Recommendation agent chooses safer alternate routes
+5. Dashboard displays:
 
-Risk agent checks hazards like dark areas or isolation
+   * metrics
+   * charts
+   * logs
+   * reasoning timeline
 
-Recommendation agent generates safer alternatives
+---
 
-Dashboard displays:
+## 🔄 7. Workflow Diagram
 
-safety score
+```
+User Input
+     │
+     ▼
+Safety Score Engine
+     │
+     ▼
+Risk Detection Agent
+     │
+     ▼
+Recommendation Agent
+     │
+     ▼
+Dashboard Visualization
+```
 
-metrics
+---
 
-logs
+## 📊 8. Sample Dashboard Metrics Table
 
-visualization
+| Metric            | Description                        |
+| ----------------- | ---------------------------------- |
+| Safety Score      | Overall safety rating              |
+| Light Level Index | Measures lighting quality          |
+| Isolation Factor  | Detects low population areas       |
+| Crowd Density     | Evaluates how populated an area is |
+| Hazard Count      | Number of detected risks           |
 
-recommended routes
+---
 
-7. Future Enhancements 🌱
+## 🌱 9. Future Enhancements
 
-Real time GPS integration
+* Real time GPS
+* Open data integration
+* Push notifications
+* Mobile app with React Native
+* Advanced anomaly detection
 
-City open data integration for crime and lighting
+---
 
-Notification alerts during travel
+## 💫 10. Purpose & Vision
 
-React Native mobile app
+waySAFE aims to help people feel safer wherever they go by combining intelligence, empathy, and environment awareness.
 
-Advanced anomaly detection
+**Mission:**
+🛡️ *Protect every step.*
 
-8. Purpose & Vision 💫
+---
 
-waySAFE is created to empower people to move freely and safely.
-The goal is simple: protect every step through intelligent, accessible safety technology.
+## 🤝 11. Credits
 
-9. Credits 🤝
-
-Designed and built with care, clarity, and innovation.
-Your trusted safety companion wherever you go.
+Designed and built with care and clarity.
+waySAFE is your safety companion powered by intelligent route reasoning.
